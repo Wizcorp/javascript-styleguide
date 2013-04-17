@@ -36,7 +36,7 @@ Limit your lines to **120 characters**. We are not living in the 90's anymore ou
 ## Quotes
 The use of **single quotes** only is highly recommended, but we won't stop you if you need to use double quotes in some specific cases.
 ```javascript
-myButton.on('tap', function () {
+myButton.on('tap', function() {
 	alert("You tapped me");
 });
 ```
