@@ -36,7 +36,7 @@ Limit your lines to **120 characters**. We are not living in the 90's anymore ou
 ## Quotes
 The use of **single quotes** only is highly recommended, but we won't stop you if you need to use double quotes in some specific cases.
 ```javascript
-myButton.on('tap', function () {
+myButton.on('tap', function() {
 	alert("You tapped me");
 });
 ```
@@ -66,9 +66,9 @@ myButton.on('tap', function () {
 Always start your curly braces on the same line as whatever they're opening.
 ```javascript
 if (time < 60) {
-	console.log('less than a minute');
+	console.log("less than a minute");
 } else {
-	console.log('a minute or more');
+	console.log("a minute or more");
 }
 ```
 
