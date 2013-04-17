@@ -66,9 +66,9 @@ myButton.on('tap', function() {
 Always start your curly braces on the same line as whatever they're opening.
 ```javascript
 if (time < 60) {
-	console.log('less than a minute');
+	console.log("less than a minute");
 } else {
-	console.log('a minute or more');
+	console.log("a minute or more");
 }
 ```
 
