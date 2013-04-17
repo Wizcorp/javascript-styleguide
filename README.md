@@ -234,7 +234,7 @@ Object oriented programming is a fairly well-understood approach to write mainta
 
 	// SuperClass definition
 
-	function SuperClass () {
+	function SuperClass() {
 		this.x = 0;
 		this.y = 0;
 	}
