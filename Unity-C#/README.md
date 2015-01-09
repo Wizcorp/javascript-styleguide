@@ -62,7 +62,7 @@ public class Name
 
 ##### Constants
 ```csharp
-public class 
+public const int MyNumber = 42;
 ```
 
 
