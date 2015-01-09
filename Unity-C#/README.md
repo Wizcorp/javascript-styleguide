@@ -1,3 +1,16 @@
+
+#Preamble 
+The below style uses the MSDN Style guidelines as a base to work with Unity, however because some of the nuances in Unity this style adapts and breaks from some of the standard conventions to obtain a higher level of readability.
+
+MSDN Style: http://msdn.microsoft.com/en-us/library/ff926074.aspx
+MSDN Class Styles documenting that public fields are not supposed to be used: http://msdn.microsoft.com/en-us/library/ms229012(v=vs.110).aspx
+MSND XML Comments: http://msdn.microsoft.com/en-us/library/b2s063f7.aspx
+
+There is also a Unity style guide however because they have used Properties, which is not supported in the Unity Editor), and that the style is almost exactly the same as the MSDN style, the MSDN style was used where possible.
+Unity Style: http://wiki.unity3d.com/index.php/Csharp_Coding_Guidelines
+
+# Style
+
 ## Indentation
 Yes, a highly contencios topic so let's not waste time, at Wizcorp we use **tabs** for our projects. Tabs should be used for indentation, meaning at the beginning of lines only.
 
@@ -41,7 +54,7 @@ private int _aName;
 
 
 ##### Property names
-In Unity properties are not supported in the editor, and their use is generally discouraged.
+In Unity properties are not supported in the editor, and their use is discouraged.  If you want to have a member in the Unity Editor you need to use a public member (which is against MSDN coding guidelines).
 ```csharp
 public int Name { get; set; }
 ```
@@ -50,13 +63,13 @@ public int Name { get; set; }
 ##### Method names
 
 ```csharp
-public void Name(int name)
+public void Rename(int name)
 ```
 
 
 ##### Class names
 ```csharp
-public class Name
+public class User
 ```
 
 
@@ -174,15 +187,17 @@ Try to put comment at the top of a block of code to explain the point of it..
 
 ### Comment Syntax
 The Visual Studio syntax is based on XML . Many tools can extract this XML and create useful help documents for you. These comments must be well-formed.
+
+It is important to note that projects in Unity may not be using Visual Studio, in this case one style should be picked, and be accepted project wide.
 ```csharp
 /// <summary>
 /// You can use the summary tags above any piece of code so tools can extract this
 /// </summary>
 
-/// If you do not want the comment to appear you can use the normal comment 
-/// blocks, the use of /* comment */ is not discouraged.
+// If you do not want the comment to appear you can use the normal comment syntax,
+// the use of /* comment */ is discouraged.
 
-// Single line version is prefered where suitable
+// Single line version is prefered
 ```
 
 ### Class Comments
@@ -203,6 +218,16 @@ public class User
 	}
 }
 
+// A simple user class
+public class User
+{
+	// User constructor initialises user name
+	// name - Persons name
+	public User(string name) 
+	{
+		// ...
+	}
+}
 ```
 
 ### Method Comments
@@ -212,6 +237,13 @@ Method descriptions should start with a sentence written in the third person dec
 /// Renames the user
 /// </summary>
 /// <param name="name">Persons name</param>
+public void Rename(string name)
+{
+	// ...
+}
+
+// Renames the user
+// name - Persons name
 public void Rename(string name)
 {
 	// ...
