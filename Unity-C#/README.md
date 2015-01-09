@@ -34,8 +34,7 @@ All names SHOULD be written in English, American English.
 ### In general:
 ##### Variable names
 The reason that underscore use of private varibles is favored even though it is generally not standard is two fold.
-1. Properties are not supported in Unity so the standard public accessor notation can not be used effectively.
-2. Avoid assign errors when passing varibles into functions.
+1. Properties are not supported in Unity so the standard public accessor notation for C# and the MSDN guidelines can not be used effectively.
 ```csharp
 public int aName;
 private int _aName;
@@ -43,7 +42,7 @@ private int _aName;
 
 
 ##### Property names
-In Unity properties are not supported in the editor, and there use is generally discouraged.
+In Unity properties are not supported in the editor, and their use is generally discouraged.
 ```csharp
 public int Name { get; set; }
 ```
@@ -62,10 +61,17 @@ public class Name
 ```
 
 
-##### Constants and Enum
+##### Constants
+```csharp
+public class 
+```
+
+
+##### Enum
 ```csharp
 public enum Name
 ```
+
 
 ##### Specific Naming Conventions
 
@@ -81,7 +87,7 @@ public enum Name
 
 - Negated boolean variable names MUST be avoided:
 ```csharp
-	var isNotError, isNotFound; // WRONG.
+	bool isNotError, isNotFound; // WRONG.
 ```
 
 - Methods returning an object MAY be named after what they return, and methods returning void after what they do.
@@ -111,7 +117,6 @@ The use of magic numbers in the code should be avoided; they should be declared 
 
 
 ## Object and Array creation
-Use trailing commas and put short declarations on a single line. Only quote keys when your interpreter complains.
 ```csharp
 
 ```
@@ -148,12 +153,6 @@ public bool IsPercentage(int percent)
 
 ```
 
-## Inheritance / Object oriented programming
-```csharp
-
-
-```
-
 
 ## Comments
 
@@ -181,11 +180,11 @@ The Visual Studio syntax is based on XML . Many tools can extract this XML and c
 /// You can use the summary tags above any piece of code so tools can extract this
 /// </summary>
 
-/*
- * If you do not want the comment to appear you can use the normal comment blocks
- */
+///
+/// If you do not want the comment to appear you can use the normal comment blocks, the use of /* comment */ is discouraged
+///
 
- // Single line version is prefered where suitable
+// Single line version is prefered where suitable
 ```
 
 ### Class Comments
