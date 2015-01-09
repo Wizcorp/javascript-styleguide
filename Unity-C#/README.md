@@ -179,9 +179,8 @@ The Visual Studio syntax is based on XML . Many tools can extract this XML and c
 /// You can use the summary tags above any piece of code so tools can extract this
 /// </summary>
 
-///
-/// If you do not want the comment to appear you can use the normal comment blocks, the use of /* comment */ is discouraged
-///
+/// If you do not want the comment to appear you can use the normal comment 
+/// blocks, the use of /* comment */ is not discouraged.
 
 // Single line version is prefered where suitable
 ```
