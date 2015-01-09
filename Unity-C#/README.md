@@ -47,27 +47,19 @@ public int Name { get; set; }
 
 ##### Function and Method names
 ```csharp
-
+public void Name(int inputVar)
 ```
 
 
 ##### Class names
 ```csharp
-
+public class Name
 ```
 
 
 ##### Constants and Enum
 ```csharp
-
-```
-
-
-### Extra rules
-
-##### Abbreviations and acronyms
-```csharp
-
+public enum Name
 ```
 
 ##### Specific Naming Conventions
@@ -76,18 +68,14 @@ public int Name { get; set; }
 
 - The terms "initialize" or "init" CAN be used where an object or a concept is established.
 
-- UI Control variables SHOULD be suffixed by the control type. Examples: leftComboBox, topScrollPane.
-
 - Plural form MUST be used to name collections.
-
-- A "num" prefix or "count" postfix SHOULD be used for variables representing a number of objects.
 
 - Iterator variables SHOULD be called "i", "j", "k", etc.
 
 - Complement names MUST be used for complement entities. Examples: get/set, add/remove, create/destroy, start/stop, insert/delete, begin/end, etc.
 
 - Negated boolean variable names MUST be avoided:
-```javascript
+```csharp
 	var isNotError, isNotFound; // WRONG.
 ```
 
@@ -95,8 +83,8 @@ public int Name { get; set; }
 
 
 ## Variable declarations
-Declare one variable per var statement, it makes it easier to re-order the lines, and put declarations in the order in which they make sense.
-Idealy, variables should be initialized where they are declared and they must be declared in the smallest scope possible. A null initialization is acceptable.
+Declare one variable per type statement, it makes it easier to re-order the lines, and put declarations in the order in which they make sense.
+Idealy, variables should be initialized where they are declared and they must be declared in the smallest scope possible.
 
 
 ### Loop
@@ -127,8 +115,9 @@ Use trailing commas and put short declarations on a single line. Only quote keys
 ## Conditions
 Any non-trivial conditions should be assigned to a descriptive variable
 ```csharp
-bool isAuthorized = (user.isAdmin() || user.isModerator());
-if (isAuthorized) {
+bool isAuthorized = (user.IsAdmin() || user.IsModerator());
+if (isAuthorized)
+{
 	Console.Log('winning');
 }
 ```
@@ -137,12 +126,15 @@ if (isAuthorized) {
 To avoid deep nesting of if-statements, always return a function's value as early as possible.
 
 ```csharp
-function isPercentage(val) {
-	if (val < 0) {
+public bool IsPercentage(int percent) 
+{
+	if (percent < 0)
+	{
 		return false;
 	}
 
-	if (val > 100) {
+	if (percent > 100)
+	{
 		return false;
 	}
 
@@ -169,60 +161,58 @@ Comments should be indented relative to their position in the code, preceding th
 Even if everybody likes commented code, do not comment every single line of code; you will kill the readability of it.
 
 Comments are supposed to explain an algorithm, not repeat it in a different language. This is wrong:
-```javascript
+```csharp
 // increment i by 1
 i += 1;
 ```
 
-Try to put comment at the top of a block of code to explain the point of it. And do not comment at the end of line of code, or only for declaration of variables (see JSDoc).
+Try to put comment at the top of a block of code to explain the point of it..
 
 
 ### Comment Syntax
-The JSDoc syntax is based on JavaDoc . Many tools extract metadata from JSDoc comments to perform code validation and optimizations. These comments must be well-formed.
-```javascript
-/**
- * A JSDoc comment should begin with a slash and 2 asterisks.
- * Inline tags should be enclosed in braces like {@code this}.
- * @desc Block tags should always start on their own line.
+The Visual Studio syntax is based on XML . Many tools can extract this XML and create useful help documents for you. These comments must be well-formed.
+```csharp
+/// <summary>
+/// You can use the summary tags above any piece of code so tools can extract this
+/// </summary>
+
+/*
+ * If you do not want the comment to appear you can use the normal comment blocks
  */
+
+ // Or the single line version
 ```
 
 ### Class Comments
-Classes must be documented with a description and a type tag that identifies the constructor.
+Classes must be documented with a description summary
 ```javascript
-/**
- * Class making something fun and easy.
- * @param {string} arg1 An argument that makes this more interesting.
- * @param {Array.<number>} arg2 List of numbers to be processed.
- * @constructor
- */
-function MyClass(arg1, arg2) {
-	// ...
-};
+/// <summary>
+/// A simple user class
+/// </summary>
+public class User
+{
+	/// <summary>
+	/// User constructor
+	/// </summary>
+	/// <param name="name">Persons name</param>
+	public User(string name) 
+	{
+		// ...
+	}
+}
+
 ```
 
 ### Method and Function Comments
 Parameter and return types should be documented. The method description may be omitted if it is obvious from the parameter or return type descriptions. Method descriptions should start with a sentence written in the third person declarative voice.
-```javascript
-/**
- * Operates on an instance of MyClass and returns something.
- * @param {MyClass} obj Instance of MyClass which leads to a long
- *     comment that needs to be wrapped to two lines.
- * @return {boolean} Whether something occured.
- */
-function someMethod(obj) {
+```csharp
+/// <summary>
+/// Renames the user object
+/// </summary>
+/// <param name="name">Persons name</param>
+public void Rename(string name)
+{
 	// ...
-}
-```
-### Property Comments
-```javascript
-/** @constructor */
-function MyClass() {
-	/**
-	 * Maximum number of things per pane.
-	 * @type {number}
-	 */
-	this.paneLimit = 4;
 }
 ```
 
