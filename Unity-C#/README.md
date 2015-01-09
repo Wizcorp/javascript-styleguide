@@ -18,7 +18,7 @@ Limit your lines to **120 characters**. We are not living in the 90's anymore ou
 
 * Semi-colons SHOULD NOT be preceded by a space.
 
-* Function calls and method calls SHOULD NOT be followed by a space. Example: `doSomething(someParameter); // NOT doSomething (someParameter)`
+* Function calls and method calls SHOULD NOT be followed by a space. Example: `DoSomething(string name); // NOT DoSomething (string name)`
 
 * Logical units within a block SHOULD be separated by one blank line.
 
@@ -26,13 +26,16 @@ Limit your lines to **120 characters**. We are not living in the 90's anymore ou
 
 
 ## Braces
-In C# where the braces are placed is up to the user, however the C# standard is on a new line.  That said as long as the project has agreed to use on the same line we won't complain.
+In C# where the braces are placed is up to the user, however the C# MSDN standard is on a new line.  That said as long as the project has agreed to use on the same line there should be no complaints.
 
 
 ## Naming
 All names SHOULD be written in English, American English.
 ### In general:
 ##### Variable names
+The reason that underscore use of private varibles is favored even though it is generally not standard is two fold.
+1. Properties are not supported in Unity so the standard public accessor notation can not be used effectively.
+2. Avoid assign errors when passing varibles into functions.
 ```csharp
 public int aName;
 private int _aName;
@@ -40,14 +43,16 @@ private int _aName;
 
 
 ##### Property names
+In Unity properties are not supported in the editor, and there use is generally discouraged.
 ```csharp
 public int Name { get; set; }
 ```
 
 
-##### Function and Method names
+##### Method names
+
 ```csharp
-public void Name(int inputVar)
+public void Name(int name)
 ```
 
 
@@ -180,19 +185,19 @@ The Visual Studio syntax is based on XML . Many tools can extract this XML and c
  * If you do not want the comment to appear you can use the normal comment blocks
  */
 
- // Or the single line version
+ // Single line version is prefered where suitable
 ```
 
 ### Class Comments
 Classes must be documented with a description summary
-```javascript
+```csharp
 /// <summary>
 /// A simple user class
 /// </summary>
 public class User
 {
 	/// <summary>
-	/// User constructor
+	/// User constructor initialises user name
 	/// </summary>
 	/// <param name="name">Persons name</param>
 	public User(string name) 
@@ -203,11 +208,11 @@ public class User
 
 ```
 
-### Method and Function Comments
-Parameter and return types should be documented. The method description may be omitted if it is obvious from the parameter or return type descriptions. Method descriptions should start with a sentence written in the third person declarative voice.
+### Method Comments
+Method descriptions should start with a sentence written in the third person declarative voice.
 ```csharp
 /// <summary>
-/// Renames the user object
+/// Renames the user
 /// </summary>
 /// <param name="name">Persons name</param>
 public void Rename(string name)
