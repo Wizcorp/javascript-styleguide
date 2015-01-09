@@ -3,7 +3,9 @@
 The below style uses the MSDN Style guidelines as a base to work with Unity, however because some of the nuances in Unity this style adapts and breaks from some of the standard conventions to obtain a higher level of readability.
 
 MSDN Style: http://msdn.microsoft.com/en-us/library/ff926074.aspx
+
 MSDN Class Styles documenting that public fields are not supposed to be used: http://msdn.microsoft.com/en-us/library/ms229012(v=vs.110).aspx
+
 MSND XML Comments: http://msdn.microsoft.com/en-us/library/b2s063f7.aspx
 
 There is also a Unity style guide however because they have used Properties, which is not supported in the Unity Editor), and that the style is almost exactly the same as the MSDN style, the MSDN style was used where possible.
