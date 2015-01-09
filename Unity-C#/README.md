@@ -8,7 +8,7 @@ MSDN Class Styles documenting that public fields are not supposed to be used: ht
 
 MSND XML Comments: http://msdn.microsoft.com/en-us/library/b2s063f7.aspx
 
-There is also a Unity style guide however because they have used Properties, which is not supported in the Unity Editor), and that the style is almost exactly the same as the MSDN style, the MSDN style was used where possible.
+There is also a Unity style guide however because they have used Properties, which is not supported in the Unity Editor, and the style is almost exactly the same as the MSDN style, the MSDN style was used where possible.
 Unity Style: http://wiki.unity3d.com/index.php/Csharp_Coding_Guidelines
 
 # Style
