@@ -33,8 +33,7 @@ In C# where the braces are placed is up to the user, however the C# MSDN standar
 All names SHOULD be written in English, American English.
 ### In general:
 ##### Variable names
-The reason that underscore use of private varibles is favored even though it is generally not standard is two fold.
-1. Properties are not supported in Unity so the standard public accessor notation for C# and the MSDN guidelines can not be used effectively.
+The reason that underscore use of private varibles is favored even though it is generally not standard is because Properties are not supported in Unity so the standard public accessor notation for C# and the MSDN guidelines can not be used effectively.
 ```csharp
 public int aName;
 private int _aName;
