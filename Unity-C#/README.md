@@ -1,4 +1,3 @@
-
 #Preamble 
 The below style uses the MSDN Style guidelines as a base to work with Unity, however because some of the nuances in Unity this style adapts and breaks from some of the standard conventions to obtain a higher level of readability.
 
@@ -6,7 +5,7 @@ MSDN Style: http://msdn.microsoft.com/en-us/library/ff926074.aspx
 
 MSDN Class Styles documenting that public fields are not supposed to be used: http://msdn.microsoft.com/en-us/library/ms229012(v=vs.110).aspx
 
-MSND XML Comments: http://msdn.microsoft.com/en-us/library/b2s063f7.aspx
+MSDN XML Comments: http://msdn.microsoft.com/en-us/library/b2s063f7.aspx
 
 There is also a Unity style guide however because they have used Properties, which is not supported in the Unity Editor, and the style is almost exactly the same as the MSDN style, the MSDN style was used where possible.
 Unity Style: http://wiki.unity3d.com/index.php/Csharp_Coding_Guidelines
@@ -14,11 +13,11 @@ Unity Style: http://wiki.unity3d.com/index.php/Csharp_Coding_Guidelines
 # Style
 
 ## Indentation
-Yes, a highly contencios topic so let's not waste time, at Wizcorp we use **tabs** for our projects. Tabs should be used for indentation, meaning at the beginning of lines only.
+Yes, a highly contentious topic so let's not waste time, at Wizcorp we use **tabs** for our projects. Tabs should be used for indentation, meaning at the beginning of lines only.
 
 
 ## Line length
-Limit your lines to **120 characters**. We are not living in the 90's anymore our screen got a lot bigger, but at the same time our brains are the same, so let's not go too far, readability come first.
+Limit your lines to **120 characters**. We are not living in the 90's any more our screen got a lot bigger, but at the same time our brains are the same, so let's not go too far, readability come first.
 
 
 ## Whitespace
@@ -48,7 +47,7 @@ In C# where the braces are placed is up to the user, however the C# MSDN standar
 All names SHOULD be written in English, American English.
 ### In general:
 ##### Variable names
-The reason that underscore use of private varibles is favored even though it is generally not standard is because Properties are not supported in Unity so the standard public accessor notation for C# and the MSDN guidelines can not be used effectively.
+The reason that underscore use of private variables is favoured even though it is generally not standard is because Properties are not supported in Unity so the standard public accessors notation for C# and the MSDN guidelines can not be used effectively.
 ```csharp
 public int aName;
 private int _aName;
@@ -109,7 +108,7 @@ public enum Name
 
 ## Variable declarations
 Declare one variable per type statement, it makes it easier to re-order the lines, and put declarations in the order in which they make sense.
-Idealy, variables should be initialized where they are declared and they must be declared in the smallest scope possible.
+Ideally, variables should be initialized where they are declared and they must be declared in the smallest scope possible.
 
 
 ### Loop
@@ -199,7 +198,7 @@ It is important to note that projects in Unity may not be using Visual Studio, i
 // If you do not want the comment to appear you can use the normal comment syntax,
 // the use of /* comment */ is discouraged.
 
-// Single line version is prefered
+// Single line version is preferred
 ```
 
 ### Class Comments
@@ -251,4 +250,3 @@ public void Rename(string name)
 	// ...
 }
 ```
-
