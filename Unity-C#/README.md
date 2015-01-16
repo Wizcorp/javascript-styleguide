@@ -47,7 +47,7 @@ In C# where the braces are placed is up to the user, however the C# MSDN standar
 All names SHOULD be written in English, American English.
 ### In general:
 ##### Variable names
-The reason that underscore use of private variables is favoured even though it is generally not standard is because Properties are not supported in Unity so the standard public accessors notation for C# and the MSDN guidelines can not be used effectively.
+The use of the underscore for private variables is favoured, even though it is generally not standard, is because Properties are not supported in Unity. This means that the C# standard for accessors can not be used effectively and the MSDN guidelines for not having public members is not followed.
 ```csharp
 public int aName;
 private int _aName;
@@ -121,6 +121,14 @@ The use of "break" and "continue" is not discouraged.
 ### Conditionals
 Complex conditional expressions SHOULD be avoided; use temporary boolean variables instead with proper naming.
 
+```csharp
+bool isAuthorized = (user.IsAdmin() || user.IsModerator());
+if (isAuthorized)
+{
+	Console.Log('winning');
+}
+```
+
 The nominal case should be put in the "if" part and the exception in the "else" part of an "if" statement.
 
 Executable statements in conditionals MUST be avoided.
@@ -134,16 +142,6 @@ The use of magic numbers in the code should be avoided; they should be declared 
 
 ```
 
-
-## Conditions
-Any non-trivial conditions should be assigned to a descriptive variable
-```csharp
-bool isAuthorized = (user.IsAdmin() || user.IsModerator());
-if (isAuthorized)
-{
-	Console.Log('winning');
-}
-```
 
 ## Return statement
 To avoid deep nesting of if-statements, always return a function's value as early as possible.
@@ -212,7 +210,7 @@ public class User
 	/// <summary>
 	/// User constructor initialises user name
 	/// </summary>
-	/// <param name="name">Persons name</param>
+	/// <param name="name">The name of the user</param>
 	public User(string name) 
 	{
 		// ...
@@ -223,7 +221,7 @@ public class User
 public class User
 {
 	// User constructor initialises user name
-	// name - Persons name
+	// name - The name of the user
 	public User(string name) 
 	{
 		// ...
@@ -235,16 +233,16 @@ public class User
 Method descriptions should start with a sentence written in the third person declarative voice.
 ```csharp
 /// <summary>
-/// Renames the user
+/// Assigns the provided name to the user
 /// </summary>
-/// <param name="name">Persons name</param>
+/// <param name="name">The new name to assign to the user</param>
 public void Rename(string name)
 {
 	// ...
 }
 
-// Renames the user
-// name - Persons name
+// Assigns the provided name to the user
+// name - The new name to assign to the user
 public void Rename(string name)
 {
 	// ...
