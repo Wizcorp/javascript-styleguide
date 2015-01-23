@@ -86,6 +86,18 @@ public enum Name
 ```
 
 
+##### Delegates
+```csharp
+public delegate ChangedNameHandler(string newValue)
+```
+
+
+##### Events
+```csharp
+public ChangedNameHandler OnNameChanged
+```
+
+
 ##### Specific Naming Conventions
 
 - The "is" prefix SHOULD be used for boolean variables and methods. Alternatives include "has", "can" and "should".
@@ -135,12 +147,6 @@ Executable statements in conditionals MUST be avoided.
 
 ### Miscellaneous
 The use of magic numbers in the code should be avoided; they should be declared using named **constants** instead.
-
-
-## Object and Array creation
-```csharp
-
-```
 
 
 ## Return statement
