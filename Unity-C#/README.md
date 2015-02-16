@@ -57,7 +57,7 @@ private int _aName;
 ##### Property names
 In Unity properties are not supported in the editor, and their use is discouraged.  If you want to have a member in the Unity Editor you need to use a public member (which is against MSDN coding guidelines).
 ```csharp
-public int Name { get; set; }
+public int name { get; set; }
 ```
 
 
