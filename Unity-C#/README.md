@@ -46,7 +46,7 @@ In C# where the braces are placed is up to the user, however the C# MSDN standar
 ## Naming
 All names SHOULD be written in English, American English.
 ### In general:
-##### Variable names
+#### Variable names
 The use of the underscore for private variables is favoured, even though it is generally not standard, is because Properties are not supported in Unity. This means that the C# standard for accessors can not be used effectively and the MSDN guidelines for not having public members is not followed.
 ```csharp
 public int aName;
@@ -54,51 +54,51 @@ private int _aName;
 ```
 
 
-##### Property names
+#### Property names
 In Unity properties are not supported in the editor, and their use is discouraged.  If you want to have a member in the Unity Editor you need to use a public member (which is against MSDN coding guidelines).
 ```csharp
 public int name { get; set; }
 ```
 
 
-##### Method names
+#### Method names
 
 ```csharp
 public void Rename(int name)
 ```
 
 
-##### Class names
+#### Class names
 ```csharp
 public class User
 ```
 
 
-##### Constants
+#### Constants
 ```csharp
-public const int MyNumber = 42;
+public const int MY_NUMBER = 42;
 ```
 
 
-##### Enum
+#### Enum
 ```csharp
 public enum Name
 ```
 
 
-##### Delegates
+#### Delegates
 ```csharp
 public delegate ChangedNameHandler(string newValue)
 ```
 
 
-##### Events
+#### Events
 ```csharp
 public ChangedNameHandler OnNameChanged
 ```
 
 
-##### Specific Naming Conventions
+#### Specific Naming Conventions
 
 - The "is" prefix SHOULD be used for boolean variables and methods. Alternatives include "has", "can" and "should".
 
@@ -191,9 +191,15 @@ Try to put comment at the top of a block of code to explain the point of it..
 
 
 ### Comment Syntax
-The Visual Studio syntax is based on XML . Many tools can extract this XML and create useful help documents for you. These comments must be well-formed.
+The XML syntax is from the Microsoft C# compiler /doc command, this command is also implemented in the Mono compiler for cross platform usability. Many tools can extract this XML and create useful help documents for you. These comments must be well-formed.
 
-It is important to note that projects in Unity may not be using Visual Studio, in this case one style should be picked, and be accepted project wide.
+It is important to note that projects in Unity may not be using Visual Studio for ease of implementation, in this case one style should be picked, and be accepted project wide.
+
+For more details about the comments and the compilers see:
+https://msdn.microsoft.com/en-us/library/aa288481%28v=vs.71%29.aspx
+
+http://www.mono-project.com/docs/about-mono/languages/csharp/
+
 ```csharp
 /// <summary>
 /// You can use the summary tags above any piece of code so tools can extract this
