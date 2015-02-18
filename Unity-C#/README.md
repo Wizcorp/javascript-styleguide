@@ -196,6 +196,7 @@ The XML syntax is from the Microsoft C# compiler /doc command, this command is a
 It is important to note that projects in Unity may not be using Visual Studio for ease of implementation, in this case one style should be picked, and be accepted project wide.
 
 For more details about the comments and the compilers see:
+
 https://msdn.microsoft.com/en-us/library/aa288481%28v=vs.71%29.aspx
 
 http://www.mono-project.com/docs/about-mono/languages/csharp/
