@@ -24,5 +24,5 @@ http://docs.unity3d.com/Manual/SpecialFolders.html
 ##Scenes
 Contains scenes view which are not limited to .Unity files but also contain any code that goes with that scene.  The game model will come under the folder Game
 
-##Static (For lack of better words)
+##Content
 This folder is for most of the Assets, Resources folder should be used sparingly and it makes a clear definition between assets on the game scene and assets for the menus.
